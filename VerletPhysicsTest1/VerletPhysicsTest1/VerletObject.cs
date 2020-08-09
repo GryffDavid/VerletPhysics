@@ -12,11 +12,9 @@ namespace VerletPhysicsTest1
     class VerletObject
     {
         public Texture2D StickTexture, PointTexture;
-        float Bounce = 0.9f;
+        float Bounce = 0.7f;
         float Gravity = 0.5f;
         float Friction = 0.999f;
-
-        static Random Random = new Random();
 
         public class Stick
         {
@@ -24,10 +22,10 @@ namespace VerletPhysicsTest1
             public float Length;
         }
 
-
         public class Node
         {
             public Vector2 CurrentPosition, PreviousPosition, Velocity;
+            public bool Tether = false;
         }
 
         List<Node> Nodes = new List<Node>();
@@ -35,37 +33,24 @@ namespace VerletPhysicsTest1
 
         public VerletObject()
         {
-            Nodes.Add(new Node() 
-            { 
-                CurrentPosition = new Vector2(0, 0),
-                PreviousPosition = new Vector2(Random.Next(-15, 15), Random.Next(-15, 15)) 
-            });
+            for (int i = 0; i < 61; i++)
+            {
+                Nodes.Add(new Node()
+                {
+                    CurrentPosition = new Vector2(0, 0),
+                    PreviousPosition = new Vector2(0, 0)
+                });
+            }
 
-            Nodes.Add(new Node()
+            for (int i = 0; i < Nodes.Count - 1; i++)
             {
-                CurrentPosition = new Vector2(100, 0),
-                PreviousPosition = new Vector2(Random.Next(-15, 5), Random.Next(-15, 15))
-            });
-
-            Nodes.Add(new Node()
-            {
-                CurrentPosition = new Vector2(0, 100),
-                PreviousPosition = new Vector2(0, 100)
-            });
-            
-            Sticks.Add(new Stick()
-            {
-                Point1 = Nodes[0],
-                Point2 = Nodes[1],
-                Length = 100
-            });
-
-            Sticks.Add(new Stick()
-            {
-                Point1 = Nodes[0],
-                Point2 = Nodes[2],
-                Length = 100
-            });
+                Sticks.Add(new Stick()
+                {
+                    Point1 = Nodes[i],
+                    Point2 = Nodes[i+1],
+                    Length = 10
+                });
+            }
 
         }
 
@@ -77,83 +62,85 @@ namespace VerletPhysicsTest1
 
         public void Update(GameTime gameTime)
         {
-            if (Mouse.GetState().LeftButton == ButtonState.Pressed && Vector2.Distance(new Vector2(Mouse.GetState().X, Mouse.GetState().Y), Nodes[0].CurrentPosition) < 32)
-                Nodes[0].CurrentPosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+            Nodes[0].CurrentPosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+            Nodes[0].Tether = true;
 
-            foreach (Stick stick in Sticks)
-            {
-                Vector2 Direction = stick.Point2.CurrentPosition - stick.Point1.CurrentPosition;
-                float Dist = Vector2.Distance(stick.Point1.CurrentPosition, stick.Point2.CurrentPosition);
-                float Diff = stick.Length - Dist;
-                float percent = Diff / Dist / 2;
-                Vector2 Offset = Direction * percent;
+            Nodes[60].CurrentPosition = new Vector2(1280 / 2, 720);
+            Nodes[60].Tether = true;
 
-                stick.Point1.CurrentPosition -= Offset;
-                stick.Point2.CurrentPosition += Offset;
-            }
 
             foreach (Node node in Nodes)
             {
-                node.Velocity = (node.CurrentPosition - node.PreviousPosition) * Friction;
-                node.PreviousPosition = node.CurrentPosition;
-                node.CurrentPosition += node.Velocity;
-                node.CurrentPosition.Y += Gravity;
+                if (node.Tether == false)
+                {
+                    node.Velocity = (node.CurrentPosition - node.PreviousPosition) * Friction;
+                    node.PreviousPosition = node.CurrentPosition;
+                    node.CurrentPosition += node.Velocity;
+                    node.CurrentPosition.Y += Gravity;
 
-                #region Handle bouncing
-                if (node.CurrentPosition.X > 1272)
-                {
-                    node.CurrentPosition.X = 1272;
-                    node.PreviousPosition.X = node.CurrentPosition.X + node.Velocity.X * Bounce;
-                }
+                    #region Handle bouncing
+                    if (node.CurrentPosition.X > 1272)
+                    {
+                        node.CurrentPosition.X = 1272;
+                        node.PreviousPosition.X = node.CurrentPosition.X + node.Velocity.X * Bounce;
+                    }
 
-                if (node.CurrentPosition.X < 0)
-                {
-                    node.CurrentPosition.X = 0;
-                    node.PreviousPosition.X = node.CurrentPosition.X + node.Velocity.X * Bounce;
-                }
+                    if (node.CurrentPosition.X < 0)
+                    {
+                        node.CurrentPosition.X = 0;
+                        node.PreviousPosition.X = node.CurrentPosition.X + node.Velocity.X * Bounce;
+                    }
 
-                if (node.CurrentPosition.Y > 712)
-                {
-                    node.CurrentPosition.Y = 712;
-                    node.PreviousPosition.Y = node.CurrentPosition.Y + node.Velocity.Y * Bounce;
-                }
+                    if (node.CurrentPosition.Y > 712)
+                    {
+                        node.CurrentPosition.Y = 712;
+                        node.PreviousPosition.Y = node.CurrentPosition.Y + node.Velocity.Y * Bounce;
+                    }
 
-                if (node.CurrentPosition.Y < 0)
-                {
-                    node.CurrentPosition.Y = 0;
-                    node.PreviousPosition.Y = node.CurrentPosition.Y + node.Velocity.Y * Bounce;
-                }
-                #endregion
-
-                if (node.CurrentPosition.Y == 712)
-                {
-                    Friction = 0.92f;
-                }
-                else
-                {
-                    Friction = 0.999f;
+                    if (node.CurrentPosition.Y < 0)
+                    {
+                        node.CurrentPosition.Y = 0;
+                        node.PreviousPosition.Y = node.CurrentPosition.Y + node.Velocity.Y * Bounce;
+                    }
+                    #endregion
                 }
             }
 
+            for (int i = 0; i < 30; i++)
+            {
+                foreach (Stick stick in Sticks)
+                {
+                    Vector2 Direction = stick.Point2.CurrentPosition - stick.Point1.CurrentPosition;
+                    float Dist = Vector2.Distance(stick.Point1.CurrentPosition, stick.Point2.CurrentPosition);
+                    float Diff = stick.Length - Dist;
+                    float percent = Diff / Dist / 2;
+                    Vector2 Offset = Direction * percent;
 
+                    if (stick.Point1.Tether == false)
+                        stick.Point1.CurrentPosition -= Offset;
+
+                    if (stick.Point2.Tether == false)
+                        stick.Point2.CurrentPosition += Offset;
+                }
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach (Node node in Nodes)
-            {
-                spriteBatch.Draw(PointTexture, new Rectangle((int)node.CurrentPosition.X, (int)node.CurrentPosition.Y, 8, 8), 
-                                 null, Color.White, 0, new Vector2(4, 4), SpriteEffects.None, 0);
-            }
+            //foreach (Node node in Nodes)
+            //{
+            //    spriteBatch.Draw(PointTexture, new Rectangle((int)node.CurrentPosition.X, (int)node.CurrentPosition.Y, 8, 8),
+            //                     null, Color.White, 0, new Vector2(4, 4), SpriteEffects.None, 0);
+            //}
 
             foreach (Stick stick in Sticks)
             {
-                for (int l = 0; l < (int)Vector2.Distance(stick.Point1.CurrentPosition, stick.Point2.CurrentPosition); l++)
+                for (int l = 0; l < (int)Vector2.Distance(stick.Point1.CurrentPosition, stick.Point2.CurrentPosition); l+=10)
                 {
                     Vector2 Direction = stick.Point2.CurrentPosition - stick.Point1.CurrentPosition;
                     Direction.Normalize();
 
-                    spriteBatch.Draw(StickTexture, stick.Point1.CurrentPosition + l * Direction, Color.White);
+                    spriteBatch.Draw(StickTexture, new Rectangle((int)(stick.Point1.CurrentPosition.X + l * Direction.X), (int)(stick.Point1.CurrentPosition.Y + l * Direction.Y), StickTexture.Width, StickTexture.Height), null, Color.White, (float)Math.Atan2(Direction.Y, Direction.X), Vector2.Zero, SpriteEffects.None, 0);
                 }
             }
         }
