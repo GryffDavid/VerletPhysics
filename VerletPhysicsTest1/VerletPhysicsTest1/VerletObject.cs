@@ -18,6 +18,8 @@ namespace VerletPhysicsTest1
         double Time;
         float offset;
 
+        static Random Random = new Random();
+
         public class Stick
         {
             public Node Point1, Point2;
@@ -36,72 +38,71 @@ namespace VerletPhysicsTest1
 
         public VerletObject()
         {
-
+            //0 - Top Left
             Nodes.Add(new Node()
             {
-                CurrentPosition = new Vector2(200, 200),
-                PreviousPosition = new Vector2(200, 200),
-                Pinned = true
+                CurrentPosition = new Vector2(0, 0),
+                PreviousPosition = new Vector2(Random.Next(-15, 15), Random.Next(-15, 15))
             });
 
-            for (int i = 0; i < 8; i++)
+            //1 - Top Right
+            Nodes.Add(new Node()
             {
-                Nodes.Add(new Node()
-                {
-                    CurrentPosition = new Vector2(0, 0),
-                    PreviousPosition = new Vector2(0, 0),
-                    Pinned = false
-                });
-            }
+                CurrentPosition = new Vector2(100, 0),
+                PreviousPosition = new Vector2(Random.Next(-15, 15), Random.Next(-15, 15))
+            });
 
-
-            //Nodes2.Add(new Node()
-            //{
-            //    CurrentPosition = new Vector2(230, 200),
-            //    PreviousPosition = new Vector2(230, 200),
-            //    Pinned = true
-            //});
-
-            //for (int i = 0; i < 20; i++)
-            //{
-            //    Nodes2.Add(new Node()
-            //    {
-            //        CurrentPosition = new Vector2(0, 0),
-            //        PreviousPosition = new Vector2(0, 0),
-            //        Pinned = false
-            //    });
-            //}
-
-
-            for (int i = 0; i < Nodes.Count - 1; i++)
+            //2 - Bottom Right
+            Nodes.Add(new Node()
             {
-                Sticks.Add(new Stick()
-                {
-                    Point1 = Nodes[i],
-                    Point2 = Nodes[i+1],
-                    Length = 6
-                });
-            }
+                CurrentPosition = new Vector2(100, 100),
+                PreviousPosition = new Vector2(Random.Next(-15, 5), Random.Next(-15, 15))
+            });
 
-            //for (int i = 0; i < Nodes2.Count - 1; i++)
-            //{
-            //    Sticks.Add(new Stick()
-            //    {
-            //        Point1 = Nodes2[i],
-            //        Point2 = Nodes2[i + 1],
-            //        Length = 30
-            //    });
-            //}
+            //3 - Bottom Left
+            Nodes.Add(new Node()
+            {
+                CurrentPosition = new Vector2(0, 100),
+                PreviousPosition = new Vector2(0, 100)
+            });
 
-            //for (int i = 0; i < Nodes2.Count - 1; i++)
-            //{
-            //    Sticks.Add(new Stick()
-            //    {
-            //        Point1 = Nodes[i],
-            //        Point2 = Nodes2[i],
-            //        Length = 40
-            //    });
-            //}
+            
+
+            Sticks.Add(new Stick()
+            {
+                Point1 = Nodes[0],
+                Point2 = Nodes[1],
+                Length = 100
+            });
+
+            Sticks.Add(new Stick()
+            {
+                Point1 = Nodes[1],
+                Point2 = Nodes[2],
+                Length = 100
+            });
+
+            Sticks.Add(new Stick()
+            {
+                Point1 = Nodes[2],
+                Point2 = Nodes[3],
+                Length = 100
+            });
+
+            Sticks.Add(new Stick()
+            {
+                Point1 = Nodes[3],
+                Point2 = Nodes[0],
+                Length = 100
+            });
+
+            //Cross brace
+            Sticks.Add(new Stick()
+            {
+                Point1 = Nodes[2],
+                Point2 = Nodes[0],
+                Length = 141f
+            });
         }
 
         public void LoadContent(ContentManager contentManager)
@@ -147,6 +148,12 @@ namespace VerletPhysicsTest1
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            foreach (Node node in Nodes)
+            {
+                spriteBatch.Draw(PointTexture, new Rectangle((int)node.CurrentPosition.X, (int)node.CurrentPosition.Y, 8, 8),
+                                 null, Color.White, 0, new Vector2(4, 4), SpriteEffects.None, 0);
+            }
+
             foreach (Stick stick in Sticks)
             {
                 for (int l = 0; l < (int)Vector2.Distance(stick.Point1.CurrentPosition, stick.Point2.CurrentPosition); l++)
@@ -154,21 +161,9 @@ namespace VerletPhysicsTest1
                     Vector2 Direction = stick.Point2.CurrentPosition - stick.Point1.CurrentPosition;
                     Direction.Normalize();
 
-                    //spriteBatch.Draw(StickTexture, stick.Point1.CurrentPosition + Direction * l, Color.White);
-                    //if (stick.Length != 8)
-                        spriteBatch.Draw(StickTexture, new Rectangle((int)(stick.Point1.CurrentPosition.X + StickTexture.Height/2), (int)(stick.Point1.CurrentPosition.Y), (int)(stick.Length), StickTexture.Height), null, Color.White, (float)Math.Atan2(Direction.Y, Direction.X), new Vector2(StickTexture.Height/2), SpriteEffects.None, 0); 
+                    spriteBatch.Draw(StickTexture, stick.Point1.CurrentPosition + l * Direction, Color.White);
                 }
             }
-
-            //foreach (Node node in Nodes)
-            //{
-            //    spriteBatch.Draw(PointTexture, new Rectangle((int)node.CurrentPosition.X, (int)node.CurrentPosition.Y, 8, 8), null, Color.White, 0, new Vector2(4, 4), SpriteEffects.None, 0);
-            //}
-
-            //foreach (Node node in Nodes2)
-            //{
-            //    spriteBatch.Draw(PointTexture, new Rectangle((int)node.CurrentPosition.X, (int)node.CurrentPosition.Y, 8, 8), null, Color.White, 0, new Vector2(4, 4), SpriteEffects.None, 0);
-            //}
         }
 
         public void UpdateNodes()

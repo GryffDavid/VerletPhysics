@@ -1,4 +1,0 @@
-G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest1\VerletPhysicsTest1\VerletPhysicsTest1Content\obj\x86\Debug\VerletPhysicsTest1Content.contentprojResolveAssemblyReference.cache
-G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest2\VerletPhysicsTest1\VerletPhysicsTest1Content\obj\x86\Debug\VerletPhysicsTest1Content.contentprojResolveAssemblyReference.cache
-G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1Content\obj\x86\Debug\VerletPhysicsTest1Content.contentprojResolveAssemblyReference.cache
-G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1Content\obj\x86\Debug\VerletPhysicsTest1Content.contentprojResolveAssemblyReference.cache

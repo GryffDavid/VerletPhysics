@@ -15,7 +15,8 @@ namespace VerletPhysicsTest1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        VerletObject VerletObject;
+        List<VerletObject> VerletObjectList = new List<VerletObject>();
+        MouseState CurrentMouseState, PreviousMouseState;
 
         public Game1()
         {
@@ -32,14 +33,12 @@ namespace VerletPhysicsTest1
         
         protected override void Initialize()
         {
-            VerletObject = new VerletObject();
             base.Initialize();
         }
         
         protected override void LoadContent()
         {
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-            VerletObject.LoadContent(Content);
+            spriteBatch = new SpriteBatch(GraphicsDevice);            
         }
         
         protected override void UnloadContent()
@@ -49,7 +48,21 @@ namespace VerletPhysicsTest1
         
         protected override void Update(GameTime gameTime)
         {
-            VerletObject.Update(gameTime);
+            CurrentMouseState = Mouse.GetState();
+            if (CurrentMouseState.LeftButton == ButtonState.Released &&
+                PreviousMouseState.LeftButton == ButtonState.Pressed)
+            {
+                VerletObject verObj = new VerletObject();
+                verObj.LoadContent(Content);
+                VerletObjectList.Add(verObj);
+            }
+
+            foreach (VerletObject verObj in VerletObjectList)
+            {
+                verObj.Update(gameTime);
+            }
+
+            PreviousMouseState = CurrentMouseState;
             base.Update(gameTime);
         }
         
@@ -57,7 +70,10 @@ namespace VerletPhysicsTest1
         {
             GraphicsDevice.Clear(Color.Black);
             spriteBatch.Begin();
-            VerletObject.Draw(spriteBatch);
+            foreach (VerletObject verObj in VerletObjectList)
+            {
+                verObj.Draw(spriteBatch);
+            }
             spriteBatch.End();
             base.Draw(gameTime);
         }
