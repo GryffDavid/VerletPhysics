@@ -44,7 +44,7 @@ namespace VerletPhysicsTest1
         
         protected override void Update(GameTime gameTime)
         {
-            VerletObject.Update(gameTime);            
+            VerletObject.Update(gameTime);
             base.Update(gameTime);
         }
         
