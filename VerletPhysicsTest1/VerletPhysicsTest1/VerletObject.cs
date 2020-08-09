@@ -15,6 +15,8 @@ namespace VerletPhysicsTest1
         float Bounce = 0.7f;
         float Gravity = 0.5f;
         float Friction = 0.999f;
+        double Time;
+        float offset;
 
         public class Stick
         {
@@ -29,6 +31,7 @@ namespace VerletPhysicsTest1
         }
 
         List<Node> Nodes = new List<Node>();
+        List<Node> Nodes2 = new List<Node>();
         List<Stick> Sticks = new List<Stick>();
 
         public VerletObject()
@@ -41,7 +44,7 @@ namespace VerletPhysicsTest1
                 Pinned = true
             });
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 8; i++)
             {
                 Nodes.Add(new Node()
                 {
@@ -50,6 +53,25 @@ namespace VerletPhysicsTest1
                     Pinned = false
                 });
             }
+
+
+            //Nodes2.Add(new Node()
+            //{
+            //    CurrentPosition = new Vector2(230, 200),
+            //    PreviousPosition = new Vector2(230, 200),
+            //    Pinned = true
+            //});
+
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    Nodes2.Add(new Node()
+            //    {
+            //        CurrentPosition = new Vector2(0, 0),
+            //        PreviousPosition = new Vector2(0, 0),
+            //        Pinned = false
+            //    });
+            //}
+
 
             for (int i = 0; i < Nodes.Count - 1; i++)
             {
@@ -60,6 +82,26 @@ namespace VerletPhysicsTest1
                     Length = 6
                 });
             }
+
+            //for (int i = 0; i < Nodes2.Count - 1; i++)
+            //{
+            //    Sticks.Add(new Stick()
+            //    {
+            //        Point1 = Nodes2[i],
+            //        Point2 = Nodes2[i + 1],
+            //        Length = 30
+            //    });
+            //}
+
+            //for (int i = 0; i < Nodes2.Count - 1; i++)
+            //{
+            //    Sticks.Add(new Stick()
+            //    {
+            //        Point1 = Nodes[i],
+            //        Point2 = Nodes2[i],
+            //        Length = 40
+            //    });
+            //}
         }
 
         public void LoadContent(ContentManager contentManager)
@@ -70,14 +112,34 @@ namespace VerletPhysicsTest1
 
         public void Update(GameTime gameTime)
         {
-            UpdateNodes();
-            if (Nodes[0].Pinned == true)
-            Nodes[0].CurrentPosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+            Time += gameTime.ElapsedGameTime.TotalMilliseconds;
 
-            for (int i = 0; i < 30; i++)
+            if (Keyboard.GetState().IsKeyDown(Keys.W))
             {
-                ConstrainNodes();
-                UpdateSticks();
+                offset += 0.025f;
+            }
+
+            if (Keyboard.GetState().IsKeyDown(Keys.S))
+            {
+                offset -= 0.025f;
+            }
+
+            if (Time > 16)
+            {
+                UpdateNodes();
+                if (Nodes[0].Pinned == true)
+                    Nodes[0].CurrentPosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+
+                //if (Nodes2[0].Pinned == true)
+                    //Nodes2[0].CurrentPosition = new Vector2(Mouse.GetState().X + 40, Mouse.GetState().Y - offset);
+
+                for (int i = 0; i < 30; i++)
+                {
+                    ConstrainNodes();
+                    UpdateSticks();
+                }
+
+                Time = 0;
             }
 
             //Nodes[0].CurrentPosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
@@ -87,14 +149,26 @@ namespace VerletPhysicsTest1
         {
             foreach (Stick stick in Sticks)
             {
-                //for (int l = 0; l < (int)Vector2.Distance(stick.Point1.CurrentPosition, stick.Point2.CurrentPosition)/4; l++)
-                //{
-                 //   Vector2 Direction = stick.Point2.CurrentPosition - stick.Point1.CurrentPosition;
-                 //   Direction.Normalize();
+                for (int l = 0; l < (int)Vector2.Distance(stick.Point1.CurrentPosition, stick.Point2.CurrentPosition); l++)
+                {
+                    Vector2 Direction = stick.Point2.CurrentPosition - stick.Point1.CurrentPosition;
+                    Direction.Normalize();
 
-                    spriteBatch.Draw(StickTexture, stick.Point1.CurrentPosition, Color.White);
-                //}
+                    //spriteBatch.Draw(StickTexture, stick.Point1.CurrentPosition + Direction * l, Color.White);
+                    //if (stick.Length != 8)
+                        spriteBatch.Draw(StickTexture, new Rectangle((int)(stick.Point1.CurrentPosition.X + StickTexture.Height/2), (int)(stick.Point1.CurrentPosition.Y), (int)(stick.Length), StickTexture.Height), null, Color.White, (float)Math.Atan2(Direction.Y, Direction.X), new Vector2(StickTexture.Height/2), SpriteEffects.None, 0); 
+                }
             }
+
+            //foreach (Node node in Nodes)
+            //{
+            //    spriteBatch.Draw(PointTexture, new Rectangle((int)node.CurrentPosition.X, (int)node.CurrentPosition.Y, 8, 8), null, Color.White, 0, new Vector2(4, 4), SpriteEffects.None, 0);
+            //}
+
+            //foreach (Node node in Nodes2)
+            //{
+            //    spriteBatch.Draw(PointTexture, new Rectangle((int)node.CurrentPosition.X, (int)node.CurrentPosition.Y, 8, 8), null, Color.White, 0, new Vector2(4, 4), SpriteEffects.None, 0);
+            //}
         }
 
         public void UpdateNodes()
@@ -108,10 +182,16 @@ namespace VerletPhysicsTest1
                     node.CurrentPosition += node.Velocity;
                     node.CurrentPosition.Y += Gravity;
                 }
+            }
 
-                if (node == Nodes[Nodes.Count-1])
+            foreach (Node node in Nodes2)
+            {
+                if (node.Pinned == false)
                 {
-                    node.CurrentPosition.Y += Gravity * 5f;
+                    node.Velocity = (node.CurrentPosition - node.PreviousPosition) * Friction;
+                    node.PreviousPosition = node.CurrentPosition;
+                    node.CurrentPosition += node.Velocity;
+                    node.CurrentPosition.Y += Gravity;
                 }
             }
         }
@@ -119,6 +199,36 @@ namespace VerletPhysicsTest1
         public void ConstrainNodes()
         {
             foreach (Node node in Nodes)
+            {
+                if (node.Pinned == false)
+                {
+                    if (node.CurrentPosition.X > 1272)
+                    {
+                        node.CurrentPosition.X = 1272;
+                        node.PreviousPosition.X = node.CurrentPosition.X + node.Velocity.X * Bounce;
+                    }
+
+                    if (node.CurrentPosition.X < 0)
+                    {
+                        node.CurrentPosition.X = 0;
+                        node.PreviousPosition.X = node.CurrentPosition.X + node.Velocity.X * Bounce;
+                    }
+
+                    if (node.CurrentPosition.Y > 712)
+                    {
+                        node.CurrentPosition.Y = 712;
+                        node.PreviousPosition.Y = node.CurrentPosition.Y + node.Velocity.Y * Bounce;
+                    }
+
+                    if (node.CurrentPosition.Y < 0)
+                    {
+                        node.CurrentPosition.Y = 0;
+                        node.PreviousPosition.Y = node.CurrentPosition.Y + node.Velocity.Y * Bounce;
+                    }
+                }
+            }
+
+            foreach (Node node in Nodes2)
             {
                 if (node.Pinned == false)
                 {

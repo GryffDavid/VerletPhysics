@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\Point.xnb</Output>
+      <Output>D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\Point.xnb</Output>
       <Time>2015-12-17T14:30:15+02:00</Time>
     </Item>
     <Item>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\RopeTexture.xnb</Output>
-      <Time>2015-12-17T18:45:38+02:00</Time>
+      <Output>D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\RopeTexture.xnb</Output>
+      <Time>2017-06-30T14:29:50+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -26,10 +26,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1Content\</RootDirectory>
-      <LoggerRootDirectory>D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1Content\</RootDirectory>
+      <LoggerRootDirectory>D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

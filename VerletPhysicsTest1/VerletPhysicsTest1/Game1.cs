@@ -23,6 +23,11 @@ namespace VerletPhysicsTest1
             graphics.PreferredBackBufferWidth = 1280;
             graphics.PreferredBackBufferHeight = 720;
             Content.RootDirectory = "Content";
+
+            graphics.SynchronizeWithVerticalRetrace = false;
+            this.IsFixedTimeStep = false;
+
+            //graphics.IsFullScreen = true;
         }
         
         protected override void Initialize()
@@ -50,7 +55,7 @@ namespace VerletPhysicsTest1
         
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
             spriteBatch.Begin();
             VerletObject.Draw(spriteBatch);
             spriteBatch.End();

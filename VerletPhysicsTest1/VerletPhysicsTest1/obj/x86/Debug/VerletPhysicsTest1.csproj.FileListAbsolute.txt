@@ -22,43 +22,51 @@ G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhys
 G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.exe
 G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.pdb
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\Point.xnb
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\RopeTexture.xnb
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\VerletPhysicsTest1.exe
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\VerletPhysicsTest1.pdb
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.dll
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.xml
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.csproj.CoreCompileInputs.cache
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.exe
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.pdb
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.csprojAssemblyReference.cache
-D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.csproj.CopyComplete
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\Point.xnb
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\RopeTexture.xnb
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\VerletPhysicsTest1.exe
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\VerletPhysicsTest1.pdb
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.dll
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.xml
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.csprojAssemblyReference.cache
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.csproj.CoreCompileInputs.cache
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.csproj.CopyComplete
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.exe
-D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest3\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.pdb
+G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\Point.xnb
+G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\RopeTexture.xnb
+G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\VerletPhysicsTest1.exe
+G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\VerletPhysicsTest1.pdb
+G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.csprojResolveAssemblyReference.cache
+G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.exe
+G:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.pdb
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\Point.xnb
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\RopeTexture.xnb
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\VerletPhysicsTest1.exe
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\VerletPhysicsTest1.pdb
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.dll
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.xml
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.csproj.CoreCompileInputs.cache
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.exe
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.pdb
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.csprojAssemblyReference.cache
+D:\Google Drive\Other Game Snippets\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.csproj.CopyComplete
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\Point.xnb
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Content\RopeTexture.xnb
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\VerletPhysicsTest1.exe
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\VerletPhysicsTest1.pdb
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.dll
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.xml
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.csprojAssemblyReference.cache
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.csproj.CoreCompileInputs.cache
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.csproj.CopyComplete
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.exe
+D:\Google Drive\Game Code\Verlet Physics\VerletPhysicsTest4 - non-constant time\VerletPhysicsTest1\VerletPhysicsTest1\obj\x86\Debug\VerletPhysicsTest1.pdb
